@@ -5,15 +5,16 @@ class human:
         self.age = age
         self.alive = alive
 
-    def __str__(human1):
+    def str(self):
         msg = self.first_name
-        msg += "Is still alive" if self.alive else "Is dead"
-        msg += self.age + "Age: "
+        msg += " is alive " if self.alive else " is dead"
+        msg += " with age = " + str(self.age)
         return msg
 
 
 
-    # def __str__(self):
-    #     msg = self.__first_name
-    #     msg += ("Is still alive"
-    #             if self.__alive else "Is dead")
+
+
+
+
+
