@@ -11,6 +11,9 @@ def main():
 
     laptops = [laptop1, laptop2, laptop3, laptop4, laptop5]
 
+    for laptop in laptops:
+        print(laptop)
+
 
 
     max_price = Manager.find_max_price(laptops)
