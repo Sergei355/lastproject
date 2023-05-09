@@ -7,13 +7,26 @@ class Manager:
         if not isinstance(laptops, (list, tuple)):
             return Laptop()
 
-            target = laptops [0]
+        target = laptops [0]
 
-            for laptop in laptops:
-                if isinstance(laptop, Laptop):
-                        if laptop.price > target.price:
-                             target = laptop
-            return target
+        for laptop in laptops:
+            if isinstance(laptop, Laptop):
+                if laptop.price > target.price:
+                                target = laptop
+        return target
+
+    @staticmethod
+    def find_min_price(laptops):
+        if not isinstance(laptops, (list, tuple)):
+            return Laptop()
+
+        target = laptops[0]
+
+        for laptop in laptops:
+            if isinstance(laptop, Laptop):
+                if laptop.price < target.price:
+                    target = laptop
+        return target
 
 
 
