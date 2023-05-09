@@ -17,6 +17,7 @@ def main():
 
 
     max_price = Manager.find_max_price(laptops)
+
     print(f"max price = {max_price}")
 
 
