@@ -2,6 +2,7 @@ from cars import Cars
 from minibuses import Minibuses
 from electrocars import Electrocars
 from trucks import Trucks
+from manager import Manager
 
 
 def main():
@@ -23,6 +24,13 @@ def main():
 
     for car in taxopark2:
         print(car)
+
+    max_price = Manager.find_max_price(taxopark1)
+
+
+    print(f"max price = {max_price}")
+
+
 
 
 if __name__ == "__main__":

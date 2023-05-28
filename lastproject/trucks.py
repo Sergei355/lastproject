@@ -13,8 +13,8 @@ class Trucks(Minibuses):
             return self.__tent_volume
 
         @tent_volume.setter
-        def battery_charge(self, battery_charge):
-            self.__battery_charge = battery_charge
+        def tent_volume(self, tent_volume):
+            self.__tent_volume = tent_volume
 
         def __str__(self):
-            return f" have tent volume: {self.__battery_charge} m3."
+            return (super().__str__() + f" have tent volume: {self.__battery_charge} m3.")
