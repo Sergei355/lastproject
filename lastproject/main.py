@@ -25,10 +25,14 @@ def main():
     for car in taxopark2:
         print(car)
 
-    max_price = Manager.find_max_price(taxopark1)
+    max_price = Manager.find_max_price_taxopark2(taxopark1)
+    gen_price = Manager.find_general_price_taxopark1(taxopark1)
+    big_taxopark = Manager.find_big_taxopark(self, taxopark1, taxopark2)
 
 
-    print(f"max price = {max_price}")
+    print(f"max price = {max_price}"
+          f"general price = {gen_price}"
+          f"big taxopark = {big_taxopark}")
 
 
 
