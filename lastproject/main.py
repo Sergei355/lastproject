@@ -1,7 +1,7 @@
-from cars import Cars
-from minibuses import Minibuses
-from electrocars import Electrocars
-from trucks import Trucks
+from car import Cars
+from minibus import Minibuses
+from electrocar import Electrocars
+from truck import Trucks
 from manager import Manager
 
 

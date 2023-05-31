@@ -1,4 +1,4 @@
-from cars import Cars
+from car import Cars
 
 
 class Minibuses(Cars):
