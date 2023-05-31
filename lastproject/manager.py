@@ -1,66 +1,47 @@
 from transport import Transport
-from cars import Cars
-from minibuses import Minibuses
-from electrocars import Electrocars
-from trucks import Trucks
 
 
 class Manager:
 
     @staticmethod
-    def find_max_price_taxopark1(taxopark1):
+    def find_max_price_taxopark(taxopark):
 
-        target = taxopark1[0]
+        target = taxopark[0]
 
-        for car in taxopark1:
-            if car.price > target.price:
+        for car in taxopark:
+            if isinstance(car, Transport) and car.price > target.price:
+                target = car
+
+        return target
+
+    @staticmethod
+    def find_min_price_taxopark(taxopark):
+
+        target = taxopark[0]
+
+        for car in taxopark:
+            if isinstance(car, Transport) and car.price < target.price:
                 target = car
         return target
 
     @staticmethod
-    def find_max_price_taxopark2(taxopark2):
-
-        target = taxopark2[0]
-
-        for car in taxopark2:
-            if car.price > target.price:
-                target = car
-        return target
-
-    @staticmethod
-    def find_min_price_taxopark1(taxopark1):
-
-        target = taxopark1[0]
-
-        for car in taxopark1:
-            if car.price > target.price:
-                target = car
-        return target
-
-    @staticmethod
-    def find_min_price_taxopark2(taxopark2):
-
-        target = taxopark2[0]
-
-        for car in taxopark2:
-            if car.price > target.price:
-                target = car
-        return target
-
-    @staticmethod
-    def find_general_price_taxopark1(taxopark1):
-
-        general_price = len(taxopark1)
+    def find_general_price_taxopark(taxopark):
         target = 0
 
-        for car in range(general_price):
-            target.price = target.price + taxopark1[car]
+        for car in taxopark:
+            target = target + car.price
 
         return target
 
     @staticmethod
-    def find_big_taxopark(self, taxopark1, taxopark2):
+    def find_big_taxopark(taxopark1, taxopark2):
+        count1 = Manager.__count(taxopark1)
+        count2 = Manager.__count(taxopark2)
 
-        result = sum(taxopark1) if sum(taxopark1) > sum(taxopark2) else sum(taxopark2)
+        result = count1 if count1 > count2 else count2
 
         return result
+
+    @staticmethod
+    def __count(taxopark):
+        return len(taxopark) if isinstance(taxopark, list) else 0

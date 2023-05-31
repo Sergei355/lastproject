@@ -18,4 +18,4 @@ class Minibuses(Cars):
 
     def __str__(self):
         return (super().__str__()
-                + f"The body of this model is: {self.__body_volume}.")
+                + f" The body of this model is: {self.__body_volume} m3.")
