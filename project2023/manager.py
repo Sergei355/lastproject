@@ -22,7 +22,7 @@ class Manager:
         for car in taxopark:
             if isinstance(car, Transport) and car.price < target.price:
                 target = car
-        return target
+        return target.price
 
     @staticmethod
     def find_general_price_taxopark(taxopark):
