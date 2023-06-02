@@ -1,4 +1,3 @@
-from builtins import super
 from transport import Transport
 
 
@@ -17,4 +16,4 @@ class Electrocars(Transport):
             self.__battery_charge = battery_charge
 
     def __str__(self):
-        return (super().__str__ + f" Have battery charge: {self.__battery_charge} km.")
+        return (super().__str__() + f" Have battery charge: {self.__battery_charge} km.")

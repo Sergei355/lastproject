@@ -1,4 +1,3 @@
-from builtins import staticmethod
 from transport import Transport
 
 

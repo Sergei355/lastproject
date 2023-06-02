@@ -1,4 +1,3 @@
-from builtins import super
 from transport import Transport
 
 
@@ -25,7 +24,6 @@ class Cars(Transport):
     def fuel_consumption(self, fuel_consumption):
             self.__fuel_consumption = fuel_consumption
 
-    @property
     def __str__(self):
-        return (super().__str__ + f" Have engine capacity: {self.__engine_capacity}L"
+        return (super().__str__() + f" Have engine capacity: {self.__engine_capacity}L"
                                         f"\n with fuel consumption: {self.__fuel_consumption}L.")

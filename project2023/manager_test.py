@@ -1,7 +1,7 @@
-#import unittest
-#from car import Cars
-#from minibus import Minibuses
-
+import unittest
+from car import Cars
+from minibus import Minibuses
+from manager import Manager
 
 class ManagerTest(unittest.TestCase):
 
@@ -22,3 +22,4 @@ class ManagerTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

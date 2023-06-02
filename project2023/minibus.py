@@ -1,5 +1,3 @@
-from builtins import super
-
 from car import Cars
 
 
@@ -19,5 +17,5 @@ class Minibuses(Cars):
         self.__body_volume = body_volume
 
     def __str__(self):
-        return (super().__str__
+        return (super().__str__()
                 + f" The body of this model is: {self.__body_volume} m3.")
