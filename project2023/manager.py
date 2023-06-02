@@ -6,13 +6,14 @@ class Manager:
     @staticmethod
     def find_max_price_taxopark(taxopark):
 
+
         target = taxopark[0]
 
         for car in taxopark:
             if isinstance(car, Transport) and car.price > target.price:
                 target = car
 
-        return target
+        return target.price
 
     @staticmethod
     def find_min_price_taxopark(taxopark):

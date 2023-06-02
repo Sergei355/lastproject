@@ -3,7 +3,7 @@ class Transport:
     def __init__(self, brand='no name', model='no name', price=1):
         self.__brand = brand
         self.__model = model
-        self.__price = price
+        self.__price = price if price > 0 else 1
 
     @property
     def brand(self):
@@ -19,7 +19,7 @@ class Transport:
 
     @price.setter
     def price(self, price):
-        if isinstance(price, int) and 0 < price:
+        if price > 0:
             self.__price = price
 
     @brand.setter
