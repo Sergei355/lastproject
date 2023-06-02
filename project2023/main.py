@@ -25,7 +25,6 @@ def main():
     for car in taxopark_135:
         print(car)
 
-
     max_price_1 = Manager.find_max_price_taxopark(taxopark_7788)
     min_price_1 = Manager.find_min_price_taxopark(taxopark_7788)
     max_price_2 = Manager.find_max_price_taxopark(taxopark_135)
@@ -34,9 +33,9 @@ def main():
     gen_price_2 = Manager.find_general_price_taxopark(taxopark_135)
     big_taxopark = Manager.find_big_taxopark(taxopark_135, taxopark_7788)
 
-    print(f"The maximum price of a car in taxi depot No. 7788 is = {max_price_1}." 
-          f"\nThe minimum price of a car in taxi depot No. 7788 is = {min_price_1}." 
-          f"\nThe maximum price of a car in taxi depot No. 135 is = {max_price_2}." 
+    print(f"The maximum price of a car in taxi depot No. 7788 is = {max_price_1}."
+          f"\nThe minimum price of a car in taxi depot No. 7788 is = {min_price_1}."
+          f"\nThe maximum price of a car in taxi depot No. 135 is = {max_price_2}."
           f"\nThe minimum price of a car in taxi depot No. 135 is = {min_price_2}."
           f"\nThe general price of a car in taxi depot No. 7788 is = {gen_price_1}."
           f"\nThe general price of a car in taxi depot No. 135 is = {gen_price_2}."

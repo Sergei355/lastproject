@@ -3,6 +3,7 @@ from car import Cars
 from minibus import Minibuses
 from manager import Manager
 
+
 class ManagerTest(unittest.TestCase):
 
     def test_cheak_min_price_taxopark_7788(self):
@@ -20,6 +21,6 @@ class ManagerTest(unittest.TestCase):
 
         self.assertEqual(expected, actual)
 
+
 if __name__ == "__main__":
     unittest.main()
-

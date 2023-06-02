@@ -13,7 +13,7 @@ class Electrocars(Transport):
 
     @battery_charge.setter
     def battery_charge(self, battery_charge):
-            self.__battery_charge = battery_charge
+        self.__battery_charge = battery_charge
 
     def __str__(self):
         return (super().__str__() + f" Have battery charge: {self.__battery_charge} km.")
